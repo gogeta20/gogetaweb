@@ -15,6 +15,9 @@ let $email2 = document.getElementById('email2');
 let $pass2 = document.getElementById('pass2');
 
 var formulario2 = document.getElementById('formulario2');
+
+var errorLogin = document.getElementById('errorLogin');
+var inputOculto = document.getElementById('nombreUserOculto');
 // --------- inputs
 
 $newUser.addEventListener('click',($e)=>{
@@ -30,11 +33,13 @@ $userLogin.addEventListener('click',($e)=>{
     $objetoAjax.setRequestHeader('Content-type','application/x-www-form-urlencoded');
     $objetoAjax.onload = function(){
         $datos = JSON.parse($objetoAjax.responseText);
-        $datos = $datos[1];
-        if($datos){
+        $verificacion = $datos[1];
+        if($verificacion){
             console.log($datos);
+            inputOculto.value=$datos[2];
             formulario2.submit();
         }else{
+            errorLogin.className ="errorLogin";
             console.log('contraseña incorrecta');
             console.log($datos);
         }

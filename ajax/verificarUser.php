@@ -15,11 +15,15 @@
         $resultado = $pdo->prepare($sentencia);
         $resultado->execute($datos);
         $result = $resultado->fetch();
-        if(password_verify($clave,$result['pass'])){
-            $resultado = ['respuesta',true];
-         }else{
+        if($result){
+            if(password_verify($clave,$result['pass'])){
+                $resultado = ['respuesta',true,$result['nombre']];
+            }else{
+                $resultado = ['respuesta',false];
+            }
+        }else{
             $resultado = ['respuesta',false];
-         }
+        }
         echo json_encode($resultado);
     }
 ?>
