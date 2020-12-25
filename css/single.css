@@ -1,0 +1,28 @@
+.postSingle{
+    width: 100%;
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 78px 1fr 60px;
+	grid-template-areas:"author author author author"
+                        "cont cont cont cont"
+                        "none none none logo";
+}
+.postSingle .cont{
+    left: 1.5em;
+}
+.postSingle p{
+    font-size: 1.4em;
+}
+.tituloSingle{
+    text-align: center;
+}
+.logo i{
+    font-size: 2em!important;
+}
+.codigoFrame{
+    max-width: 1200px;
+    margin: 1em auto;
+    border: solid 3px black;
+    border-radius: .5em;
+    box-shadow: 2px 6px 7px #2f2f2f;
+}

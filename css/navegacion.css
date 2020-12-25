@@ -1,0 +1,100 @@
+header *{
+	padding: 0%;
+	/* margin: 0%; */
+	z-index: 200;
+}
+.contentHeader{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 15% 1fr;
+	grid-template-areas: "logo navegacion"
+												"logo barra";
+	/* position: fixed;
+	top:0; */
+}
+
+.logo{
+	grid-area: 'logo';
+	text-align: center;
+	/* flexbox */
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+.gogetaLogo{
+	font-family: 'mau' !important;
+}
+.logo a:focus{ 
+	box-shadow: 0px 0px 5px 0px var(--c2); 
+}
+.logo a:hover{
+	box-shadow: 0px 0px 5px 0px var(--c2); 
+}
+.logo span{
+	border:solid 2px var(--c5);
+	padding: .3em .5em;
+	font-size: var(--f2);
+	background: var(--gradi1);
+	/* box-shadow: 0px 0px 3px 1px var(--c1),0px 0px 8px 0px var(--c5); */
+	border-radius: .5em;
+}
+
+/* enlaces de navegacion */
+.navegacion{
+	margin-top: 1em;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-area: 'navegacion';
+}
+.enlacesNav1{
+	display: flex;
+	justify-content: flex-end;
+}
+.enlacesNav{
+	width: 60%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+	list-style: none;
+	margin: 9px 0px;
+}
+.enlacesNav li{
+	text-align: center;
+	padding: .6em 0%;
+}
+.enlacesNav button{
+	text-align: center;
+	padding: .6em 0%;
+	border: none;
+}
+
+/* -------------------------------------- enlaces de navegacion */
+/* buscar en header */
+.barra{
+	
+	display:flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 1.5em;
+}
+.divBuscar{
+	
+	width: 30%;
+}
+
+.botonBuscar{
+	background-color: transparent;
+	border: none;
+	font-size: 1.3em;
+	margin: .3em;
+	color:rgb(168, 168, 168);
+	transition: .3s;
+}
+.botonBuscar:hover{
+	cursor: pointer;
+	color:rgb(138, 136, 136);
+	transform: scale(1.1);
+}
+
+/* -------------------------------------- enlaces de navegacion */
+/* el input de buscar esta en temaGlobales.css */
