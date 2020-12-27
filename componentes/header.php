@@ -15,7 +15,7 @@
                 <ul class="enlacesNav">
                     <a>blog</a>
                     <a>noticias</a>
-                    <a>notas</a>
+                    <a href="login.php"><?php echo  isset($_SESSION['user']) ? "Mi cuenta": "Login";?></a>
                 </ul>
             </div>
             

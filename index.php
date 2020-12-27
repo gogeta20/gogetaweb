@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once './db/conexion.php';
 	$conex = new ConexionPDO();
 

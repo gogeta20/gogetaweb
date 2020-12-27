@@ -46,7 +46,7 @@ a:hover{
 	font-family: 'mau', sans-serif;
 	font-size: var(--f1);
 	color: var(--c3);
-	max-width: 1200px;
+	width: 1200px;
 	margin: auto;
 }
 *{

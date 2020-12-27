@@ -57,7 +57,7 @@
                     <div>
                         <label for="name">email: </label>
                         <input class="" type="hidden" name="nombreUserOculto" id="nombreUserOculto" value="">
-                        <input class="inputPredeterminado" type="email" name="emailOld" id="email2" required>
+                        <input class="inputPredeterminado" type="email" name="emailOld" id="email2" required value="<?php echo $emailUser;?>">
                     </div>
                     <div>
                         <label for="pass">Contraseña: </label>
